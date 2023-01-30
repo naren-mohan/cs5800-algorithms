@@ -1,0 +1,19 @@
+Pseudocode for question 1 - Intersecting LinkedLists
+
+1. m <- Count the length of linked list with head1    (O(m))
+2. n <- Count the length of linked list with head2    (O(n))
+3. Get the absolute difference between the length of first and the second list: 
+    offset <- abs(m - n)
+4. Skip the diff_length number of nodes in the greater list 
+5. Offset the longer list
+    For i = 1 to offset:
+        head1 <- head1.next
+6. Compare the corresponding nodes from one list to the other respectievely
+    While true:
+        if head1.data = head2.data: 
+            return head1.data 
+        else:
+            head1 <- head1.next
+            head2 <- head2.next
+
+
